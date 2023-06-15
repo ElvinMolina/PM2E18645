@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E14586.MainPage">
+
+
+    <StackLayout>
+        <Label x:Name="pol" Text="SITE VISITOR APP" FontSize="Body" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Image Margin="10,5,10,5" x:Name="foto" Source="{Binding image}"  HeightRequest="250" BackgroundColor="LightPink" />
+    
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="TomarFoto" Text="Tomar Foto" Clicked="TomarFoto_Clicked" FontSize="Body" BackgroundColor="DarkSeaGreen" Margin="50,1,0,1"/>
+        <Button x:Name="Galeria" Text="Ir a Galería" Clicked="Galeria_Clicked" FontSize="Body" BackgroundColor="Orange" Margin="30,1,0,1"/>
+        </StackLayout>
+        
+        <Label x:Name="lblCod" Text="{Binding id}" FontSize="Body" TextColor="Black"/>
+        <Label x:Name="txter" Text="Latitud:" />
+        <Entry x:Name="lblLat"  FontSize="Body" TextColor="Black" IsEnabled="False"/>
+        <Label x:Name="txtgh" Text="Longitud:" />
+        <Entry x:Name="lblLon" FontSize="Body" TextColor="Black" IsEnabled="False"/>
+        <Entry x:Name="txtDes" Text="{Binding descripcion}" Placeholder="Ingrese descripción del sitio"/>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="Agregar" Text="Agregar" Clicked="Agregar_Clicked" BackgroundColor="LawnGreen" Margin="70,1,30,1" FontSize="Body" />
+            <Button x:Name="Lista" Text="IR A Lista" Clicked="Lista_Clicked" BackgroundColor="CornflowerBlue" Margin="30,1,30,1" FontSize="Body" />
+        </StackLayout>
+
+        <Button x:Name="Salir" Text="Salir de la Aplicación" Clicked="Salir_Clicked" BackgroundColor="Red" Margin="30,20,30,1" FontSize="Body" />
+
+    </StackLayout>
+
+</ContentPage>

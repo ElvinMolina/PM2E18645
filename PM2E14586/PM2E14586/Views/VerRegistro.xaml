@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E14586.Views.VerRegistro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Margin="30,10,30,5" x:Name="foto" Source="{Binding image}"  HeightRequest="250" BackgroundColor="HotPink" />
+            <Label x:Name="lblCod" Text="{Binding id}" TextColor="Black"/>
+            <Label x:Name="txtol" Text="Latitud:"/>
+            <Label x:Name="lblLat" Text="{Binding latitud}" TextColor="Black"/>
+            <Label x:Name="txtytr" Text="Longitud:" />
+            <Label x:Name="lblLon"  Text="{Binding longitud}" TextColor="Black"/>
+            <Entry x:Name="txtDes" Text="{Binding descripcion}" IsEnabled="False"/>
+
+            <Button x:Name="Lista" Text="Ir a Lista" Clicked="Lista_Clicked" BackgroundColor="Green" Margin="30,5,30,5"/>
+            <Button x:Name="Eliminar" Text="Eliminar" Clicked="Eliminar_Clicked" BackgroundColor="Red" Margin="30,5,30,5"/>
+            <Button x:Name="Enviar" Text="Compartir" Clicked="Enviar_Clicked" BackgroundColor="YellowGreen" Margin="30,5,30,5"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
