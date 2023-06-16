@@ -47,7 +47,7 @@ namespace PM2E14586
         {
             if (!CrossMedia.Current.IsPickPhotoSupported)
             {
-                await DisplayAlert("Lo siento!!", "Error de permisos", "Configura");
+                await DisplayAlert("Alerta", "Error de permisos", "Configura tus permisos");
                 return;
             }
             var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
@@ -75,7 +75,7 @@ namespace PM2E14586
         {
                 if (direccion == "" || String.IsNullOrEmpty(txtDes.Text) || String.IsNullOrEmpty(lblLat.Text))
                 {
-                    await DisplayAlert("Lo siento!!", "No se puede agregar el registro si no tiene imagen, latitud, longitud o descripción (Recuerde encender la ubicación del telefono)","Ingresa tus datos");
+                    await DisplayAlert("Alerta", "Debe tener datos en su registro","Ingresa tus datos");
 
                 }
                 else
