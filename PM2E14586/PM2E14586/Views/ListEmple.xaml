@@ -3,17 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PM2E14586.Views.ListEmple">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="ListaEmpleados"  ItemTapped="ListaEmpleados_ItemTapped" >
-
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding descripcion}" TextColor="Blue" />
-
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-        </StackLayout>
+        <ListView x:Name="ListaEmpleados" ItemTapped="ListaEmpleados_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding descripcion}" TextColor="Blue" FontSize="16" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
