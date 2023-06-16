@@ -30,7 +30,7 @@ namespace PM2E14586.Views
 
             base.OnAppearing();
             Pin ubicacion = new Pin();
-            ubicacion.Label = "Tu destino";
+            ubicacion.Label = "Pin: ";
             ubicacion.Address = descripcionGuardada;
             ubicacion.Position = new Position(Convert.ToDouble(latitudGuardada), Convert.ToDouble(longitudGuardada));
             Mapa.Pins.Add(ubicacion);

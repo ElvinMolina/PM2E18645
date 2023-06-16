@@ -19,7 +19,7 @@ namespace PM2E14586.Views
 
         private async void ListaEmpleados_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            String sexResult = await DisplayActionSheet("¿Qué desea hacer? ", "Cancelar", null, "Ver Registro", "Geolocalización");
+            String sexResult = await DisplayActionSheet("Seleccione una opción ", "Cancelar", null, "Ver Registro", "Geolocalización");
 
 
             switch (sexResult)

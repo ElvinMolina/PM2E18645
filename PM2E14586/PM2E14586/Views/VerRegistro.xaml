@@ -14,7 +14,7 @@
 
             <Button x:Name="Lista" Text="Ir a Lista" Clicked="Lista_Clicked" BackgroundColor="Green" Margin="30,5,30,5"/>
             <Button x:Name="Eliminar" Text="Eliminar" Clicked="Eliminar_Clicked" BackgroundColor="Red" Margin="30,5,30,5"/>
-            <Button x:Name="Enviar" Text="Compartir" Clicked="Enviar_Clicked" BackgroundColor="YellowGreen" Margin="30,5,30,5"/>
+            <Button x:Name="Enviar" Text="Compartir Ubicación" Clicked="Enviar_Clicked" BackgroundColor="YellowGreen" Margin="30,5,30,5"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

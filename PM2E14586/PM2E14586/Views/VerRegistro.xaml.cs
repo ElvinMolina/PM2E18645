@@ -27,7 +27,7 @@ namespace PM2E14586.Views
         {
             if (String.IsNullOrEmpty(lblCod.Text))
             {
-                await DisplayAlert("LO SIENTO!!", "No se puede actualizar si esta no es una vista", "OK");
+                await DisplayAlert("Error", "No es posible ver su lista", "OK");
             }
             else
             {
@@ -38,12 +38,12 @@ namespace PM2E14586.Views
                 var resultado = await App.BaseDatos.EmpleadoBorrar(emple);
                 if (resultado != 0)
                 {
-                    await DisplayAlert("AVISO!", "Lugar eliminado con éxito!", "OK");
+                    await DisplayAlert("éxito", "Lugar eliminado correctamente", "OK");
                     await Navigation.PopAsync();
                 }
                 else
                 {
-                    await DisplayAlert("LO SIENTO!", "Error al eliminar estos datos", "OK");
+                    await DisplayAlert("Error", "No es posible eliminar el registro", "OK");
                 }
 
             }

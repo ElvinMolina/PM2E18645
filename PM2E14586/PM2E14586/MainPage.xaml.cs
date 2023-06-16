@@ -43,33 +43,6 @@ namespace PM2E14586
             });
         }
 
-        private async void Galeria_Clicked(object sender, EventArgs e)
-        {
-            if (!CrossMedia.Current.IsPickPhotoSupported)
-            {
-                await DisplayAlert("Alerta", "Error de permisos", "Configura tus permisos");
-                return;
-            }
-            var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
-            {
-                PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
-
-            });
-
-            direccion = file.Path;
-
-            if (file != null)
-            {
-                foto.Source = ImageSource.FromStream(() => { return file.GetStream(); });
-                return;
-            }
-            var Sharephoto = file.Path;
-            await Share.RequestAsync(new ShareFileRequest
-            {
-                Title = "Foto",
-                File = new ShareFile(Sharephoto)
-            });
-        }
 
         private async void Agregar_Clicked(object sender, EventArgs e)
         {
@@ -90,7 +63,7 @@ namespace PM2E14586
                     var resultado = await App.BaseDatos.EmpleadoGuardar(emple);
                     if (resultado != 0)
                     {
-                        await DisplayAlert("AVISO!!", "Lugar guardado con éxito!", "OK");
+                        await DisplayAlert("éxito", "Registro Guardado Correctamente", "OK");
                         foto.Source = ("");
                         direccion = "";
                         txtDes.Text = "";
@@ -99,7 +72,7 @@ namespace PM2E14586
                     }
                     else
                     {
-                        await DisplayAlert("LO SIENTO", "Debe encender la ubiación", "OK");
+                        await DisplayAlert("Error", "Verifique su ubicación ", "OK");
                     }
                 }
          
@@ -118,7 +91,7 @@ namespace PM2E14586
         {
             if (String.IsNullOrEmpty(lblCod.Text))
             {
-                await DisplayAlert("LO SIENTO", "No se puede actualizar si esta no es una vista", "OK");
+                await DisplayAlert("Error", "No se puede actualizar si esta no es una vista", "OK");
             }
             else
             {
@@ -134,7 +107,7 @@ namespace PM2E14586
                 }
                 else
                 {
-                    await DisplayAlert("LO SIENTO", "Error al eliminar estos datos", "OK");
+                    await DisplayAlert("Error", "Error al eliminar estos datos", "OK");
                 }
 
             }
